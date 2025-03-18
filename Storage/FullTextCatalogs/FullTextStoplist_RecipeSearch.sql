@@ -1,0 +1,2 @@
+﻿CREATE FULLTEXT STOPLIST [RecipeSearch]
+AUTHORIZATION [dbo];

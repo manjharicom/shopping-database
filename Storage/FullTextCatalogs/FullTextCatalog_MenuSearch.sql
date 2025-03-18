@@ -1,0 +1,3 @@
+﻿CREATE FULLTEXT CATALOG [FullTextCatalog_MenuSearch]
+    WITH ACCENT_SENSITIVITY = OFF
+    AUTHORIZATION [dbo];

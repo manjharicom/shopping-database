@@ -1,0 +1,6 @@
+﻿CREATE SCHEMA [admin]
+GO
+CREATE SCHEMA [data]
+GO
+CREATE SCHEMA [internal]
+GO

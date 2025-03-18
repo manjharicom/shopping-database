@@ -1,0 +1,2 @@
+﻿CREATE FULLTEXT STOPLIST [ProductSearch]
+AUTHORIZATION [dbo];

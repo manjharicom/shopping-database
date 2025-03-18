@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>shopping_database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{73558d2d-d083-4312-b91d-369e30ab41a0}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>shopping_database</RootNamespace>
+    <AssemblyName>shopping_database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Schemas" />
+    <Folder Include="Schemas\dbo" />
+    <Folder Include="Schemas\dbo\Tables" />
+    <Folder Include="Schemas\data" />
+    <Folder Include="Schemas\data\Functions" />
+    <Folder Include="Schemas\admin" />
+    <Folder Include="Schemas\admin\Tables" />
+    <Folder Include="Schemas\data\Schema" />
+    <Folder Include="Schemas\admin\Schema" />
+    <Folder Include="Schemas\data\Procedures" />
+    <Folder Include="Schemas\internal" />
+    <Folder Include="Schemas\internal\Schema" />
+    <Folder Include="Schemas\internal\Procedures" />
+    <Folder Include="Schemas\internal\Functions" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Migrations" />
+    <Folder Include="Scripts\Migrations\1.0.0" />
+    <Folder Include="Schemas\dbo\Procedures" />
+    <Folder Include="Schemas\admin\Procedures" />
+    <Folder Include="Schemas\dbo\Types" />
+    <Folder Include="Storage" />
+    <Folder Include="Storage\FullTextCatalogs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schemas\dbo\Tables\Category.sql" />
+    <Build Include="Schemas\dbo\Tables\Product.sql" />
+    <Build Include="Schemas\dbo\Tables\SuperMarket.sql" />
+    <Build Include="Schemas\data\Functions\UdfPopulateCategories.sql" />
+    <Build Include="Schemas\admin\Tables\StaticData.sql" />
+    <Build Include="Schemas\data\Functions\UdfPopulateSuperMarkets.sql" />
+    <Build Include="Schemas\dbo\Tables\BarCode.sql" />
+    <Build Include="Schemas\admin\Tables\StaticDataDependencies.sql" />
+    <Build Include="Schemas\admin\Tables\StaticDataStatements.sql" />
+    <Build Include="Schemas\data\Procedures\PopulateStaticData.sql" />
+    <Build Include="Schemas\internal\Schema\internal.sql" />
+    <Build Include="Schemas\internal\Procedures\CatchHandler.sql" />
+    <Build Include="Schemas\internal\Functions\FormatErrorMessage.sql" />
+    <Build Include="Schemas\data\Procedures\PopulateStaticDataDependencies.sql" />
+    <Build Include="Schemas\data\Procedures\PopulateStaticDataStatements.sql" />
+    <Build Include="Schemas\dbo\Tables\Settings.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetProductsForCategory.sql" />
+    <Build Include="Schemas\admin\Procedures\PopulateStaticData.sql" />
+    <Build Include="Schemas\internal\Functions\GetPopulateSetting.sql" />
+    <Build Include="Schemas\internal\Functions\GetSetting.sql" />
+    <Build Include="Schemas\internal\Functions\SplitObjectName.sql" />
+    <Build Include="Schemas\internal\Functions\GetModifiedCode.sql" />
+    <Build Include="Schemas\internal\Procedures\SetSetting.sql" />
+    <Build Include="Schemas\admin\Procedures\ApplyStaticData.sql" />
+    <Build Include="Schemas\internal\Functions\UdfGetStaticDataStatement.sql" />
+    <Build Include="Schemas\internal\Functions\UdfGetObjectName.sql" />
+    <Build Include="Schemas\internal\Procedures\LongPrint.sql" />
+    <Build Include="Schemas\internal\Functions\ColumnExists.sql" />
+    <Build Include="Schemas\internal\Functions\ObjectExists.sql" />
+    <Build Include="Schemas\internal\Functions\IndexExists.sql" />
+    <Build Include="Schemas\internal\Functions\TypeExists.sql" />
+    <Build Include="Schemas\internal\Functions\ExtendedPropertyExists.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetProduct.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetProducts.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetCategories.sql" />
+    <Build Include="Schemas\dbo\Tables\ShoppingList.sql" />
+    <Build Include="Schemas\dbo\Tables\ShoppingListProduct.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetShoppingListProducts.sql" />
+    <Build Include="Schemas\dbo\Procedures\CreateShoppingList.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetSuperMarkets.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddProductsToShoppingList.sql" />
+    <Build Include="Schemas\dbo\Types\UdtId.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetCategory.sql" />
+    <Build Include="Schemas\data\Functions\UdfPopulateProducts.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddProductToShoppingList.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextCatalog_ProductSearch.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextIndex_ProductSearch.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextStoplist_ProductSearch.sql" />
+    <Build Include="Schemas\internal\Functions\udf_full_text_search_string.sql" />
+    <Build Include="Schemas\internal\Functions\udf_count_string_occurrences.sql" />
+    <Build Include="Schemas\internal\Functions\udf_split_text_to_table.sql" />
+    <Build Include="Schemas\internal\Functions\udf_find_products_matching_keywords.sql" />
+    <Build Include="Schemas\internal\Functions\find_products.sql" />
+    <Build Include="Schemas\dbo\Procedures\SearchProducts.sql" />
+    <Build Include="Schemas\internal\Functions\ExistsInShoppingList.sql" />
+    <Build Include="Schemas\internal\Functions\ProductsJson.sql" />
+    <Build Include="Schemas\dbo\Procedures\RemoveProductFromShoppingList.sql" />
+    <Build Include="Schemas\dbo\Procedures\DeleteShoppingList.sql" />
+    <Build Include="Schemas\dbo\Tables\Area.sql" />
+    <Build Include="Schemas\data\Functions\UdfPopulateAreas.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetAreas.sql" />
+    <Build Include="Schemas\dbo\Procedures\SetSuperMarket.sql" />
+    <Build Include="Schemas\dbo\Tables\CategorySuperMarket.sql" />
+    <Build Include="Schemas\data\Functions\UdfPopulateCategorySuperMarket.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddProduct.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddCategory.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddArea.sql" />
+    <Build Include="Schemas\dbo\Procedures\DeleteShoppingListItems.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateProductQuantity.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateProduct.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateCategory.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateArea.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetArea.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddSuperMarket.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateSuperMarket.sql" />
+    <Build Include="Schemas\dbo\Procedures\MergeCategorySuperMarket.sql" />
+    <Build Include="Schemas\dbo\Types\UdtCategorySuperMarket.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetCategorySuperMarkets.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetSuperMarket.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateShoppingList.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetShoppingList.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetShoppingLists.sql" />
+    <Build Include="Schemas\dbo\Procedures\DeleteSupermarket.sql" />
+    <Build Include="Schemas\dbo\Tables\Uom.sql" />
+    <Build Include="Schemas\data\Functions\UdfPopulateUom.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetUoms.sql" />
+    <Build Include="Schemas\dbo\Types\UdtCodeList.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetUom.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddUom.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateUom.sql" />
+    <Build Include="Schemas\dbo\Tables\ShoppingListProductPrice.sql" />
+    <Build Include="Schemas\dbo\Tables\ShoppingListPrice.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddShoppingListPrice.sql" />
+    <Build Include="Schemas\dbo\Types\UdtShoppingListProductPrice.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateShoppingListPrice.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetShoppingListPrice.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetShoppingListPrices.sql" />
+    <Build Include="Schemas\internal\Functions\ShoppingListProductPriceJson.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetShoppingListProductPrices.sql" />
+    <Build Include="Schemas\dbo\Tables\Recipe.sql" />
+    <Build Include="Schemas\dbo\Tables\RecipeProduct.sql" />
+    <Build Include="Schemas\dbo\Tables\Menu.sql" />
+    <Build Include="Schemas\dbo\Tables\MenuRecipe.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetRecipes.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetRecipe.sql" />
+    <Build Include="Schemas\internal\Functions\RecipeProductsJson.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddRecipe.sql" />
+    <Build Include="Schemas\dbo\Types\UdtRecipeProduct.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddProductsToRecipe.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateRecipe.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextCatalog_RecipeSearch.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextStoplist_RecipeSearch.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextIndex_RecipeSearch.sql" />
+    <Build Include="Schemas\internal\Functions\udf_find_recipes_matching_keywords.sql" />
+    <Build Include="Schemas\internal\Functions\find_recipes.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddProductToRecipe.sql" />
+    <Build Include="Schemas\dbo\Procedures\RemoveProductFromMenu.sql" />
+    <Build Include="Schemas\dbo\Tables\MenuProduct.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddMenu.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddProductToMenu.sql" />
+    <Build Include="Schemas\dbo\Procedures\AddRecipeToMenu.sql" />
+    <Build Include="Schemas\internal\Functions\udf_find_menus_matching_keywords.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextCatalog_MenuSearch.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextStoplist_MenuSearch.sql" />
+    <Build Include="Storage\FullTextCatalogs\FullTextIndex_MenuSearch.sql" />
+    <Build Include="Schemas\internal\Functions\find_menus.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetMenus.sql" />
+    <Build Include="Schemas\dbo\Procedures\GetMenu.sql" />
+    <Build Include="Schemas\internal\Functions\MenuProductsJson.sql" />
+    <Build Include="Schemas\dbo\Procedures\UpdateMenu.sql" />
+    <Build Include="Schemas\dbo\Procedures\RemoveRecipeFromMenu.sql" />
+    <Build Include="Schemas\dbo\Procedures\SearchRecipes.sql" />
+    <Build Include="Schemas\internal\Functions\MenuRecipesJson.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schemas\admin\Schema\admin.sql" />
+    <Build Include="Schemas\data\Schema\data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\msdb.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\msdb.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="shopping-database.refactorlog" />
+  </ItemGroup>
+</Project>

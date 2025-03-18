@@ -1,0 +1,75 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [admin] (Schema)
+       [data] (Schema)
+       [internal] (Schema)
+       [dbo].[UdtId] (User-Defined Table Type)
+       [admin].[StaticDataStatements] (Table)
+       [admin].[StaticDataDependencies] (Table)
+       [admin].[StaticData] (Table)
+       [dbo].[BarCode] (Table)
+       [dbo].[Category] (Table)
+       [dbo].[Product] (Table)
+       [dbo].[ProductCategory] (Table)
+       [dbo].[ProductSuperMarket] (Table)
+       [dbo].[Settings] (Table)
+       [dbo].[Settings].[UXSettingsName] (Index)
+       [dbo].[ShoppingList] (Table)
+       [dbo].[ShoppingListProduct] (Table)
+       [dbo].[SuperMarket] (Table)
+       [admin].[DFStaticDataIsTestData] (Default Constraint)
+       [dbo].[DF_ShoppingList_DateCreated] (Default Constraint)
+       [dbo].[DF_ShoppingList_[DateModified] (Default Constraint)
+       [dbo].[DF_ShoppingListProduct_DateCreated] (Default Constraint)
+       [dbo].[DF_ShoppingListProduct_[DateModified] (Default Constraint)
+       [admin].[FKStaticDataStatementsStaticDataId] (Foreign Key)
+       [dbo].[FKBarCodeProductId] (Foreign Key)
+       [dbo].[FKProductCategoryProductId] (Foreign Key)
+       [dbo].[FKProductCategoryCategoryId] (Foreign Key)
+       [dbo].[FKProductSuperMarketProductId] (Foreign Key)
+       [dbo].[FKProductSuperMarketSuperMarketId] (Foreign Key)
+       [dbo].[FKShoppingListSuperMarketId] (Foreign Key)
+       [dbo].[FKShoppingListProductShoppingListId] (Foreign Key)
+       [dbo].[FKShoppingListProductProductId] (Foreign Key)
+       [internal].[GetSetting] (Function)
+       [internal].[GetPopulateSetting] (Function)
+       [internal].[FormatErrorMessage] (Function)
+       [internal].[ExtendedPropertyExists] (Function)
+       [internal].[IndexExists] (Function)
+       [internal].[ColumnExists] (Function)
+       [internal].[UdfGetObjectName] (Function)
+       [data].[UdfPopulateSuperMarkets] (Function)
+       [data].[UdfPopulateCategories] (Function)
+       [internal].[UdfGetStaticDataStatement] (Function)
+       [internal].[GetModifiedCode] (Function)
+       [internal].[SplitObjectName] (Function)
+       [internal].[TypeExists] (Function)
+       [internal].[ObjectExists] (Function)
+       [internal].[CatchHandler] (Procedure)
+       [internal].[LongPrint] (Procedure)
+       [internal].[SetSetting] (Procedure)
+       [dbo].[AddProductsToShoppingList] (Procedure)
+       [dbo].[CreateShoppingList] (Procedure)
+       [dbo].[GetCategories] (Procedure)
+       [dbo].[GetProduct] (Procedure)
+       [dbo].[GetProducts] (Procedure)
+       [dbo].[GetProductsForCategory] (Procedure)
+       [dbo].[GetShoppingListProducts] (Procedure)
+       [dbo].[GetSuperMarkets] (Procedure)
+       [admin].[ApplyStaticData] (Procedure)
+       [data].[PopulateStaticDataStatements] (Procedure)
+       [data].[PopulateStaticDataDependencies] (Procedure)
+       [data].[PopulateStaticData] (Procedure)
+       [admin].[PopulateStaticDatas] (Procedure)
+
+** Supporting actions
